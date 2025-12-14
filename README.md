@@ -246,7 +246,7 @@ AI was used as a development assistant, not as a replacement for understanding o
 - Commits are frequent and descriptive
 - Commits where AI assistance was used include AI co-authorship, as required
 Example:
-- Co-authored-by: ChatGPT <AI@users.noreply.github.c
+- Co-authored-by: ChatGPT <AI@users.noreply.github.com>
 
 ---
 
