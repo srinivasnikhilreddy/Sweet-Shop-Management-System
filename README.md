@@ -1,4 +1,4 @@
-<img width="1366" height="768" alt="Screenshot (548)" src="https://github.com/user-attachments/assets/f118b088-cf41-4843-9368-b47fc6998b6f" /><img width="1366" height="768" alt="Screenshot (544)" src="https://github.com/user-attachments/assets/d8037ddb-9396-442d-b386-eed3a792197d" /># 🍬 Sweet Shop Management System
+# 🍬 Sweet Shop Management System
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Frontend](https://img.shields.io/badge/Frontend-Angular-blue)](#)
