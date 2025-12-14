@@ -1,3 +1,2 @@
-🍬 Sweet Shop Management System
-
+# 🍬 Sweet Shop Management System
 TDD Kata – Full Stack Application
