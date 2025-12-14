@@ -6,7 +6,6 @@
 [![Database](https://img.shields.io/badge/Database-MSSQL-lightgrey)](#)
 
 ## **TDD Kata – Full Stack Application**
----
 
 ## **📌 Project Overview**
 
@@ -23,3 +22,54 @@ The system enables users to browse, search, and purchase sweets, while administr
 - Responsible and transparent AI usage in development
 
 ---
+
+## **🛠 Tech Stack**
+### Backend 
+- Java – Spring Boot
+- Spring Security (JWT Authentication)
+- JPA / Hibernate
+- Relational Database (MSSQL)
+- JUnit & Mockito for testing
+
+### Frontend 
+- Angular
+- TypeScript
+- HTML5 / CSS3
+- Angular Forms & HttpClient
+
+### Tooling 
+- Git & GitHub
+- Maven
+- Node.js & npm
+
+---
+
+## **🔐 Features**
+### User Authentication
+- User registration
+- User login
+- JWT-based authentication
+- Role-based access (Admin / User)
+
+### Sweet Management (Protected)
+- Add a new sweet (Admin)
+- View all sweets
+- Search sweets by:
+  -- Name
+  -- Category
+  -- Price range
+- Update sweet details (Admin)
+- Delete sweet (Admin)
+
+### Inventory Management (Protected)
+- Purchase a sweet (decreases quantity)
+- Restock a sweet (Admin only)
+- Purchase button disabled when stock is zero
+
+### Frontend UI
+- Modern, responsive UI
+- Dashboard listing all sweets
+- Search & filter functionality
+- Admin-only forms for Add / Edit / Delete
+- Image upload support for sweets
+
