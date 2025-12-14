@@ -1,0 +1,84 @@
+<div class="register-container">
+  <h2>Register</h2>
+
+  <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+
+  <form [formGroup]="reactiveForm" (ngSubmit)="register()">
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="username">Email</label>
+      <input id="username" type="email" formControlName="username" style="width: 780px;">
+      <div *ngIf="reactiveForm.get('username')?.invalid && reactiveForm.get('username')?.touched"
+           class="text-danger">
+        <span *ngIf="reactiveForm.get('username')?.errors?.['required']">Email is required.</span>
+        <span *ngIf="reactiveForm.get('username')?.errors?.['email']">Invalid email format.</span>
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" style="width: 780px;">
+      <div *ngIf="reactiveForm.get('password')?.invalid && reactiveForm.get('password')?.touched"
+           class="text-danger">
+        <span *ngIf="reactiveForm.get('password')?.errors?.['required']">Password is required.</span>
+        <span *ngIf="reactiveForm.get('password')?.errors?.['minlength']">
+          Minimum 5 characters required.
+        </span>
+      </div>
+    </div>
+
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input id="name" type="text" formControlName="name" style="width: 780px;">
+    </div>
+
+    <!-- Phone -->
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input id="phone" type="text" formControlName="phone" style="width: 780px;">
+    </div>
+
+    <!-- Role -->
+    <div class="form-group">
+      <label for="role">Role</label>
+      <select id="role" formControlName="role" style="width: 812px;">
+        <option value="ROLE_USER">Customer</option>
+        <option value="ROLE_ADMIN">Admin</option>
+      </select>
+    </div>
+
+    <!-- Admin-only fields -->
+    <div *ngIf="isAdminSelected()">
+      <h3 class="section-heading">Admin Details</h3>
+
+      <div class="form-group">
+        <label for="department">Department</label>
+        <input id="department" type="text" formControlName="department" style="width: 780px;">
+      </div>
+
+      <div class="form-group">
+        <label for="designation">Designation</label>
+        <input id="designation" type="text" formControlName="designation" style="width: 780px;">
+      </div>
+    </div>
+
+    <!-- Profile Picture -->
+    <div class="form-group">
+      <label for="profilePicture">Profile Picture</label>
+      <input id="profilePicture" type="file" accept="image/*" (change)="onFileSelected($event)" style="width: 780px;">
+    </div>
+
+    <!-- Register Button -->
+    <div class="form-group" style="margin-top: 1.5rem;">
+      <button type="submit" class="btn-register" [disabled]="submitting">
+        {{ submitting ? 'Registering...' : 'Register' }}
+      </button>
+    </div>
+
+    <a routerLink="/login" class="back-link">Back to Login</a>
+
+  </form>
+</div>

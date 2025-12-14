@@ -1,0 +1,107 @@
+/* Container */
+.sweet-form-container
+{
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.sweet-form-container h2
+{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+/* Form group */
+.form-group
+{
+    margin-bottom: 1rem;
+}
+
+.form-group label
+{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #555555;
+}
+
+.form-group input
+{
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus
+{
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+    outline: none;
+}
+
+/* Two column layout */
+.two-column
+{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.two-column .form-group
+{
+    flex: 1;
+    min-width: 45%;
+}
+
+/* Actions */
+.form-actions
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.8rem;
+}
+
+/* Buttons */
+button
+{
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary
+{
+    background-color: #22c55e;
+    color: white;
+}
+
+.btn-primary:hover
+{
+    background-color: #16a34a;
+}
+
+.btn-secondary
+{
+    background-color: #e5e7eb;
+    color: #333;
+}
+
+.btn-secondary:hover
+{
+    background-color: #d1d5db;
+}

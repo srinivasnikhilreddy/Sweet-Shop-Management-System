@@ -1,0 +1,41 @@
+<div class="sweet-form-container">
+  <h2>Add Sweet</h2>
+
+  <form>
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" [(ngModel)]="name" name="name" style="width: 780px;"/>
+    </div>
+
+    <div class="two-column">
+      <div class="form-group">
+        <label>Category</label>
+        <input type="text" [(ngModel)]="category" name="category" style="width: 370px;"/>
+      </div>
+
+      <div class="form-group">
+        <label>Price</label>
+        <input type="number" [(ngModel)]="price" name="price" style="width: 370px;"/>
+      </div>
+    </div>
+
+    <div class="two-column">
+      <div class="form-group">
+        <label>Quantity</label>
+        <input type="number" [(ngModel)]="quantity" name="quantity" style="width: 370px;"/>
+      </div>
+
+      <div class="form-group">
+        <label>Sweet Image</label>
+        <input type="file" accept="image/*" (change)="onImageSelected($event)"  style="width: 370px;"/>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="btn-primary" (click)="save()">Save Sweet</button>
+      <button type="button" class="btn-secondary" (click)="cancel()">Cancel</button>
+    </div>
+
+  </form>
+</div>

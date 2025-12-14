@@ -1,0 +1,34 @@
+<div class="sweet-form-container" *ngIf="sweet">
+  <h2>Edit Sweet</h2>
+
+  <form>
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" [(ngModel)]="sweet.name" name="name" style="width: 780px;"/>
+    </div>
+
+    <div class="two-column">
+      <div class="form-group">
+        <label>Category</label>
+        <input type="text" [(ngModel)]="sweet.category" name="category" style="width: 370px;"/>
+      </div>
+
+      <div class="form-group">
+        <label>Price</label>
+        <input type="number" [(ngModel)]="sweet.price" name="price" style="width: 370px;"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Quantity</label>
+      <input type="number" [(ngModel)]="sweet.quantity" name="quantity" style="width: 780px;"/>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="btn-primary" (click)="update()">Update Sweet</button>
+      <button type="button" class="btn-secondary" (click)="cancel()">Cancel</button>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,75 @@
+<!-- HEADER -->
+<header class="top-header">
+  <div class="logo" style="font-family: 'Playfair Display', serif; font-style: italic;
+                           font-size: 29px; color: red; position: relative; left: 30px;">Sweet Shop</div>
+
+  <!-- SEARCH BOX -->
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Search sweets..."
+      [(ngModel)]="searchText"
+      (input)="filterSweets()"
+    style="width: 400px;"/>
+    <span class="search-icon" style="left: 400px;">🔍</span>
+  </div>
+
+  <nav class="admin-actions" *ngIf="isAdmin">
+   	<button class="btn-add-sweet" (click)="addSweet()">
+  <span class="icon">+</span>
+  <span class="label">Add Sweet</span>
+</button>
+  </nav>
+
+<button class="btn-logout" (click)="logout()">
+  <span class="icon">⎋</span>
+  <span class="label">Logout</span>
+</button>
+
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-text">
+    <h1 style="position: relative; left: 55px; top: 80px;">Sweet Shop</h1>
+    <p class="brand-tagline">Fresh • Authentic • Delicious</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <button>Categories</button>
+    <button>Basket</button>
+    <button>Offers</button>
+    <button>Trending Items</button>
+  </aside>
+
+  <!-- SWEETS GRID -->
+  <section class="sweets-grid">
+    <div class="sweet-card" *ngFor="let sweet of filteredSweets">
+
+    <img [src]="'http://localhost:9070' + sweet.imageUrl" alt="{{ sweet.name }}"/>
+
+      <h3>{{ sweet.name }}</h3>
+      <p class="price">₹ {{ sweet.price }}</p>
+
+      <p class="stock" [class.out]="sweet.quantity === 0">
+        {{ sweet.quantity > 0 ? sweet.quantity + ' in stock' : 'Out of stock' }}
+      </p>
+
+      <!-- CUSTOMER ACTION -->
+      <button class="buy-btn" (click)="purchase(sweet)" [disabled]="sweet.quantity === 0">Purchase</button>
+
+      <!-- ADMIN ACTIONS -->
+      <div class="admin-card-actions" *ngIf="isAdmin">
+        <button (click)="editSweet(sweet.id)">✏️</button>
+        <button (click)="restock(sweet.id)">🔄</button>
+        <button (click)="deleteSweet(sweet.id)">🗑</button>
+      </div>
+
+    </div>
+  </section>
+</div>
