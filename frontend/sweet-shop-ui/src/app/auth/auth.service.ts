@@ -8,7 +8,7 @@ import { LoginRequest, RegisterRequest, AuthResponse } from '../shared/models/au
 })
 export class AuthService
 {
-    private readonly apiUrl = 'http://localhost:9070/api/auth';
+    private readonly apiUrl = 'http://localhost:8080/api/auth';
 
     private readonly ACCESS_TOKEN = 'accessToken';
     private readonly REFRESH_TOKEN = 'refreshToken';

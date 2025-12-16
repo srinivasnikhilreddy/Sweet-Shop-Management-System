@@ -8,7 +8,7 @@ import { Sweet } from '../shared/models/sweet.model';
 })
 export class SweetService
 {
-    private readonly apiUrl = 'http://localhost:9070/api/sweets';
+    private readonly apiUrl = 'http://localhost:8080/api/sweets';
     constructor(private http: HttpClient) {}
 
     getAll(): Observable<Sweet[]>

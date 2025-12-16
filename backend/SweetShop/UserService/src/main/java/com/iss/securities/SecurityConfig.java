@@ -39,6 +39,8 @@ public class SecurityConfig
                                 .requestMatchers("/api/auth/**").permitAll()
                                 .requestMatchers("/profile-pictures/**").permitAll()
                                 .requestMatchers("/sweet-images/**").permitAll()
+                                .requestMatchers("/actuator/health").permitAll()
+                                .requestMatchers("/actuator/**").permitAll() // optional
                                 //SWEETS (ADMIN)
                                 .requestMatchers(HttpMethod.POST, "/api/sweets/add").hasRole("ADMIN")
                                 .requestMatchers(HttpMethod.PUT, "/api/sweets/update/**").hasRole("ADMIN")
