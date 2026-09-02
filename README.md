@@ -223,23 +223,6 @@ A test report is included as part of the deliverables.
 
 ---
 
-## ***🤖 My AI Usage***
-### AI Tools Used
-- ChatGPT (OpenAI)
-### How I Used AI
-- To brainstorm REST API endpoint structure and request/response design
-- To generate initial boilerplate for Angular components and Spring Boot controllers
-- To assist in debugging TypeScript and Spring Boot errors
-- To help refine UI design and CSS for a professional look
-- To support writing and refining unit test scenarios
-
-### Reflection
-AI significantly improved development speed by reducing time spent on boilerplate code and syntax-level issues.
-However, all architectural decisions, business logic, validations, testing strategy, and final implementations were designed, reviewed, and refined by me to ensure correctness, maintainability, and alignment with the kata requirements.
-AI was used as a development assistant, not as a replacement for understanding or ownership of the code.
-
----
-
 ## **📂 Git & Version Control**
 
 - Git was used throughout development
